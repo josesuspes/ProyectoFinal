@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataBase2Services:DataBaseScheme
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:dataBase2Services="http://www.example.org/dataBase2Services">
-  <databaseelement
-      xsi:type="dataBase2Services:Table">
-    <attribute/>
-  </databaseelement>
-  <databaseelement
-      xsi:type="dataBase2Services:Procedure">
-    <patrametro/>
-  </databaseelement>
-</dataBase2Services:DataBaseScheme>
+<dataBase2Services:DataBaseScheme xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataBase2Services="http://www.example.org/dataBase2Services"
+    xsi:schemaLocation="http://www.example.org/dataBase2Services dataBase2Services.ecore"/>
