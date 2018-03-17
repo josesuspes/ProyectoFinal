@@ -5,38 +5,129 @@
     editDirectory="/DataBase2Services.edit/src-gen" editorDirectory="/DataBase2Services.editor/src-gen"
     modelPluginID="DataBase2Services" modelName="DataBase2Services" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightFields="false" usedGenPackages="#//dataBase2Services/DataBase" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>dataBase2Services.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="DataBase2Services" disposableProviderFactory="true" ecorePackage="dataBase2Services.ecore#/">
-    <genClasses ecoreClass="dataBase2Services.ecore#//DataBaseScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/user"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/password"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/server"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/port"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBaseScheme/dataBase"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBaseScheme/databaseelement"/>
-    </genClasses>
-    <genClasses ecoreClass="dataBase2Services.ecore#//DatabaseElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DatabaseElement/name"/>
-    </genClasses>
-    <genClasses ecoreClass="dataBase2Services.ecore#//Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//Table/attribute"/>
-    </genClasses>
-    <genClasses ecoreClass="dataBase2Services.ecore#//Procedure">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//Procedure/patrametro"/>
-    </genClasses>
-    <genClasses ecoreClass="dataBase2Services.ecore#//Attribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Attribute/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Attribute/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Attribute/longitud"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Attribute/foreing"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Attribute/primaryKey"/>
-    </genClasses>
-    <genClasses ecoreClass="dataBase2Services.ecore#//Patrametro">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Patrametro/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Patrametro/tipo"/>
-    </genClasses>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/EnumType">
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/VARCHAR"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/NUMERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/DATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/DataBaseEnumType">
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/Oracle"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/MySql"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/SQLServer"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/ReturnType">
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/VARCHAR"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/NUMERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/TABLE"/>
+    </genEnums>
+    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="dataBase2Services.ecore#//DataBase">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/EnumType">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/VARCHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/NUMERIC"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType/DATE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/DataBaseEnumType">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/Oracle"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/MySql"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DataBaseEnumType/SQLServer"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/ReturnType">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/VARCHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/NUMERIC"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/DATE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType/TABLE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/DatabaseEnumType">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DatabaseEnumType/Oracle"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DatabaseEnumType/SqlServer"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/DatabaseEnumType/MySql"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/EnumType.1">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType.1/VARCHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType.1/NUMERC"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/EnumType.1/DATE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//DataBase/ReturnType.1">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType.1/VARCHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType.1/NUMERIC"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType.1/DATE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//DataBase/ReturnType.1/TABLE"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="dataBase2Services.ecore#//DataBase/DatabaseElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DatabaseElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/Attribute">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Attribute/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Attribute/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Attribute/length"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/Table">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/Table/attribute"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/Table/foreingkey"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/Table/primarykey"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/Procedure">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/Procedure/patrametro"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/Procedure/return"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/DataBaseScheme">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/user"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/password"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/server"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/port"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBaseScheme/dataBase"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/DataBaseScheme/databaseelement"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/Return">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Return/type"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/Patrametro">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Patrametro/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Patrametro/type"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="dataBase2Services.ecore#//Services">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//Services/OperationType">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/OperationType/CREATE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/OperationType/DELETE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/OperationType/UPDATE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/OperationType/SELECT"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//Services/EnumTypeService">
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/EnumTypeService/STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/EnumTypeService/INTEGER"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/EnumTypeService/DOUBLE"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/EnumTypeService/ARRAY"/>
+        <genEnumLiterals ecoreEnumLiteral="dataBase2Services.ecore#//Services/EnumTypeService/BOOLEAN"/>
+      </genEnums>
+      <genClasses ecoreClass="dataBase2Services.ecore#//Services/Service">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Service/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//Services/Service/operation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataBase2Services.ecore#//Services/Service/databaseelement"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//Services/Operation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Operation/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Operation/operationType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//Services/Operation/parameter"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//Services/Operation/return"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//Services/Parameter">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Parameter/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Parameter/type"/>
+      </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//Services/Return">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//Services/Return/type"/>
+      </genClasses>
+    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
