@@ -94,6 +94,11 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Patrametro/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/Patrametro/type"/>
       </genClasses>
+      <genClasses ecoreClass="dataBase2Services.ecore#//DataBase/DataBase2Services">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataBase2Services.ecore#//DataBase/DataBase2Services/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/DataBase2Services/service"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataBase2Services.ecore#//DataBase/DataBase2Services/databasescheme"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="dataBase2Services.ecore#//Services">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="dataBase2Services.ecore#//Services/OperationType">

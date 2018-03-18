@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dataBase2Services" nsURI="http://www.example.org/dataBase2Services"
     nsPrefix="dataBase2Services">
-  <eSubpackages name="DataBase">
+  <eSubpackages name="DataBase" nsURI="DataBase" nsPrefix="DB">
     <eClassifiers xsi:type="ecore:EClass" name="DatabaseElement" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
@@ -74,8 +74,15 @@
       <eLiterals name="DATE" value="2"/>
       <eLiterals name="TABLE" value="3"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataBase2Services">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
+          upperBound="-1" eType="#//Services/Service" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="databasescheme" lowerBound="1"
+          upperBound="-1" eType="#//DataBase/DataBaseScheme" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="Services">
+  <eSubpackages name="Services" nsURI="Services" nsPrefix="SR">
     <eClassifiers xsi:type="ecore:EEnum" name="OperationType">
       <eLiterals name="CREATE"/>
       <eLiterals name="DELETE" value="1"/>
