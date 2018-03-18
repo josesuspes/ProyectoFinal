@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DB:DataBase2Services
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DB="DataBase"
+    xsi:schemaLocation="DataBase Services#//DataBase">
+  <service name="EgresadoServices"
+      databaseelement="//@databasescheme.0/@databaseelement.0">
+    <operation
+        name="createEgresado"/>
+    <operation
+        name="updateEgresado"
+        operationType="UPDATE"/>
+    <operation
+        name="deleteEgresado"
+        operationType="DELETE"/>
+    <operation
+        name="selectEgresado"
+        operationType="SELECT"/>
+  </service>
+  <databasescheme
+      name="egresados_fukl"
+      user="irsadmin"
+      password="XXXX"
+      server="192.168.100.41"
+      dataBase="SQLServer">
+    <databaseelement
+        xsi:type="DB:Table"
+        name="Egresado"
+        foreingkey="//@databasescheme.0/@databaseelement.0/@attribute.3"
+        primarykey="//@databasescheme.0/@databaseelement.0/@attribute.0">
+      <attribute
+          name="codigo"
+          length="12"/>
+      <attribute
+          name="nombres"
+          length="60"/>
+      <attribute
+          name="apelidos"
+          length="60"/>
+      <attribute
+          name="codigoPrograma"
+          length="8"/>
+    </databaseelement>
+    <databaseelement
+        xsi:type="DB:Table"
+        name="Programa"
+        primarykey="//@databasescheme.0/@databaseelement.1/@attribute.0">
+      <attribute
+          name="codigoPrograma"
+          length="8"/>
+      <attribute
+          name="nombrePrograma"
+          length="120"/>
+    </databaseelement>
+  </databasescheme>
+</DB:DataBase2Services>

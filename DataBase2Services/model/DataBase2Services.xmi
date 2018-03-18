@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DB:DataBase2Services
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DB="DataBase"
+    xsi:schemaLocation="DataBase Services#//DataBase"
+    name="OracleServices">
+  <service name="PersonaServices"
+      databaseelement="//@databasescheme.0/@databaseelement.0">
+    <operation
+        name="createPersona"/>
+    <operation
+        name="updatePersona"
+        operationType="UPDATE"/>
+    <operation
+        name="deletePersona"
+        operationType="DELETE"/>
+    <operation
+        name="selectPersona"
+        operationType="SELECT"/>
+  </service>
+  <databasescheme
+      name="PROD"
+      user="ICEBERG"
+      password="XXX"
+      server="172.16.3.1"
+      port="1521">
+    <databaseelement
+        xsi:type="DB:Table"
+        name="Persona"
+        foreingkey="//@databasescheme.0/@databaseelement.1/@attribute.0"
+        primarykey="//@databasescheme.0/@databaseelement.1/@attribute.0 //@databasescheme.0/@databaseelement.0/@attribute.0">
+      <attribute
+          name="numeroDocumento"
+          length="16"/>
+      <attribute
+          name="nombre"
+          length="60"/>
+      <attribute
+          name="apellidos"
+          length="60"/>
+      <attribute
+          name="direccion"
+          length="120"/>
+    </databaseelement>
+    <databaseelement
+        xsi:type="DB:Table"
+        name="TipoDocumento"
+        primarykey="//@databasescheme.0/@databaseelement.1/@attribute.0">
+      <attribute
+          name="idTipoDocumento"
+          type="NUMERIC"
+          length="8"/>
+      <attribute
+          name="nombreTipoDocumento"
+          length="160"/>
+    </databaseelement>
+  </databasescheme>
+</DB:DataBase2Services>
